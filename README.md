@@ -2,6 +2,14 @@
 
 **Apply declared measurement calibration and retain the full first-order uncertainty budget.**
 
+## Notation Systems and this instrument
+
+**Notation Systems develops evidence-backed industrial intelligence and computational instrumentation, connecting expert knowledge and observations to bounded, inspectable work.** Its domains remain **PAYLOAD** (physical operations, facilities, materials and logistics, including Caravan), **LANDSHARK** (land/site and spatial constraints), and **TRADEWIND** (contracts, prices and exposure). PayloadOS/ESM govern industrial evidence/state; Dossier Services packages scoped service outputs.
+
+This instrument owns **declared calibration applicability and measurement-specific uncertainty propagation**, not sensor acquisition, certificate issuance or evidence admission. [Notations Systems Terminal (NET)](https://github.com/giasonpooni/Notations-Systems-Terminal) coordinates typed work without absorbing this provider's mathematics. NET / `net` / `ciw` and `mcur` identities remain intact. The current repository is `Metrological-Calibration-Runtime`; older names and pins below remain compatibility context.
+
+The intended expertise-amplification path is **expert input → reviewed specification → bounded execution → observations and checks → authorized integration/release**. Manufacturing, robotics, materials, GIS/remote sensing, DSP and analytics are workload families, not completed integrations. Cartesian Graphics is the firm's games/graphics/physics/simulation label; 1792 is a reference workload, not metrological traceability. Keep evidence, operation, execution, result and verification distinct. General capture and dependency-aware rebuilding remain targets; logical containers are not OS security sandboxes. Existing APIs, first-order assumptions and licences are unchanged. Evaluate useful accepted work alongside human effort, cost, rework and appropriate physical validation.
+
 | NET micro-tool | Identity and scope |
 | --- | --- |
 | User-facing name | **Calibration** |
