@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this calibration instrument, cite the software and exact source revision."
+title: "Notation Systems Calibration Runtime"
+type: software
+version: 0.1.0
+authors:
+  - name: "Giason Pooni"
+repository-code: "https://github.com/giasonpooni/Notations-Calibration-Runtime"
+license: MPL-2.0
+abstract: "A bounded affine measurement-calibration instrument with explicit applicability and correlated first-order uncertainty propagation."
+keywords:
+  - calibration
+  - measurement uncertainty
+  - metrology
+  - scientific computing
