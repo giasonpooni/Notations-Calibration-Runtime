@@ -40,7 +40,7 @@ def load_manifest() -> dict:
 
 
 def source_revision() -> str:
-    value = os.environ.get("GITHUB_SHA")
+    value = os.environ.get("NOTATIONS_SOURCE_REVISION") or os.environ.get("GITHUB_SHA")
     if value:
         return value
     try:
