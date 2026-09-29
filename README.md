@@ -1,20 +1,20 @@
-# Calibration
+# Notations Calibration
 
-**Apply declared measurement calibration and retain the full first-order uncertainty budget.**
+**Apply a supplied affine calibration while preserving raw measurements and propagating correlated uncertainty.**
+
+[Run](#run) · [Public API](#public-api) · [Scope](#status-and-scope) · [Research profile](#research-profile)
 
 ## Notation Systems and this instrument
 
-**Notation Systems develops evidence-backed industrial intelligence and computational instrumentation, connecting expert knowledge and observations to bounded, inspectable work.** Its domains remain **PAYLOAD** (physical operations, facilities, materials and logistics, including Caravan), **LANDSHARK** (land/site and spatial constraints), and **TRADEWIND** (contracts, prices and exposure). PayloadOS/ESM govern industrial evidence/state; Dossier Services packages scoped service outputs.
+**Notation Systems — Frontier Tooling and Instrumentation for Digital Futures.** This instrument provides declared calibration applicability and measurement-specific uncertainty propagation. [Notations Systems Terminal](https://github.com/giasonpooni/Notations-Systems-Terminal) coordinates supported operations; it does not replace the provider's mathematics, measurement semantics or evidence authority.
 
-This instrument owns **declared calibration applicability and measurement-specific uncertainty propagation**, not sensor acquisition, certificate issuance or evidence admission. [Notations Systems Terminal (NET)](https://github.com/giasonpooni/Notations-Systems-Terminal) coordinates typed work without absorbing this provider's mathematics. NET / `net` / `ciw` and `mcur` identities remain intact. The current repository is `Metrological-Calibration-Runtime`; older names and pins below remain compatibility context.
-
-The intended expertise-amplification path is **expert input → reviewed specification → bounded execution → observations and checks → authorized integration/release**. Manufacturing, robotics, materials, GIS/remote sensing, DSP and analytics are workload families, not completed integrations. Cartesian Graphics is the firm's games/graphics/physics/simulation label; 1792 is a reference workload, not metrological traceability. Keep evidence, operation, execution, result and verification distinct. General capture and dependency-aware rebuilding remain targets; logical containers are not OS security sandboxes. Existing APIs, first-order assumptions and licences are unchanged. Evaluate useful accepted work alongside human effort, cost, rework and appropriate physical validation.
+The current repository is `Notations-Calibration-Runtime`. Existing `mcur` imports, operation IDs and historical pins remain unchanged. The firm's operational products and Cartesian Graphics' creative/IP programme have separate state and release responsibilities. [Organization profile](https://github.com/giasonpooni/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/PUBLIC_POSITIONING.md).
 
 | NET micro-tool | Identity and scope |
 | --- | --- |
 | User-facing name | **Calibration** |
 | Proposed NET operation | `measure.calibrate` |
-| Implementation repository | `Metrological-Calibration-Uncertainty-Runtime` |
+| Implementation repository | `Notations-Calibration-Runtime` |
 | Existing provider and import | Metrological Calibration and Uncertainty Runtime / MCUR; `mcur` |
 | Existing operation | `mcur.affine-first-order.v1` |
 | Current boundary | Apply a declared affine calibration and propagate joint uncertainty; no calibration-fitting or certificate-issuing service |
@@ -28,13 +28,12 @@ NET owns session composition and dispatch; this provider owns calibration
 applicability and measurement-specific uncertainty propagation. **Sensor Adapter**
 retains the measurement-chain boundary and **Sensitivity** retains general
 Jacobian operations. Evidence, operation specifications, execution attempts and
-verification records remain distinct. Repository URLs, imports, operation IDs,
-contracts, historical pins and licence terms are unchanged.
+verification records remain distinct. Imports, operation IDs, contracts,
+historical pins and licence terms are unchanged.
 
-[Notations Engineering Terminal (CIW)](https://github.com/giasonpooni/Notations-Engineering-Terminal) · [Stack placement and ownership](docs/STACK.md) · [Diagram atlas](https://github.com/giasonpooni/Notations-Engineering-Terminal/blob/main/docs/DIAGRAMS.md) · [License](LICENSE)
+[Notations Systems Terminal (CIW)](https://github.com/giasonpooni/Notations-Systems-Terminal) · [Stack placement and ownership](docs/STACK.md) · [Diagram atlas](https://github.com/giasonpooni/Notations-Systems-Terminal/blob/main/docs/DIAGRAMS.md) · [License](LICENSE)
 
 MCUR is a bounded scientific instrument for applying a declared affine measurement calibration and propagating its joint uncertainty. It keeps the raw observation, indicated value, corrected value, calibration evidence references, applicability checks, and uncertainty budget distinct.
-
 
 ```mermaid
 flowchart TD
@@ -116,10 +115,18 @@ The complete examples demonstrate concrete record construction. The optional `mc
 | Sensitivity / Jacobian Sensitivity Propagation Testbed (JSPT) | Generalized sensitivity and uncertainty propagation remain separate from this measurement-specific calibration operation. |
 | Geometric State Inference Engine (GSIE) | May consume the corrected measurement and candidate uncertainty through an explicit mapping. MCUR does not infer plant state or certify estimator adequacy. |
 | Estimator Bench / SET | Owns the existing exchange contract and external conformance validation. |
-| [Notations Engineering Terminal (CIW)](https://github.com/giasonpooni/Notations-Engineering-Terminal) / State Ledger (ESM) | Bind evidence, executions, results, verification, and admission under their own authority. This repository has no native CIW adapter and grants no admission or actuation authority. |
+| [Notations Systems Terminal (CIW)](https://github.com/giasonpooni/Notations-Systems-Terminal) / State Ledger (ESM) | Bind evidence, executions, results, verification, and admission under their own authority. This repository has no native CIW adapter and grants no admission or actuation authority. |
 
 See [the contract](docs/CONTRACT.md), [numerical semantics](docs/NUMERICS.md), and [stack role](docs/STACK_ROLE.md).
 
+## Research profile
+
+**Question:** when do declared calibration chains preserve their measurement meaning and uncertainty? The affine specimen supplies a bounded test case for joint covariance, applicability at acquisition time and the separation of raw, indicated and corrected values.
+
+Compare reference errors, cross-term effects, refusal behavior and replay under fixed assumptions; then test new compositions without treating shared correlations as independent. Record runtime and human effort separately from scientific accuracy. Broader categorical or measure-theoretic formulations are research goals, not established results of this implementation.
+
+[Shared research protocol](https://github.com/giasonpooni/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/RESEARCH_PROGRAMME.md). This documentation installs no telemetry collector, extra language backend or CUDA implementation and reports no new test run.
+
 ## License
 
-Mozilla Public License 2.0. See [LICENSE](LICENSE).
+Mozilla Public License 2.0. See [LICENSE](LICENSE). Existing attribution, numerical code, tests, dependencies and publication status are unchanged.
