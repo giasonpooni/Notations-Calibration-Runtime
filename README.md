@@ -52,15 +52,17 @@ The complete ordered covariance includes correlation between the indication, gai
 
 ## Organization
 
-**Notation Systems Inc** is the parent organization.
+**Notation Systems Inc** is the parent organization: a scientific computing and systems engineering company developing computational instruments, software and interactive environments for understanding and building physical and virtual systems.
+
+The company's development direction connects measurement, state estimation and sensor fusion, scientific modelling, simulation and execution, from materials and machines to interactive worlds.
 
 | Division | Focus |
 | --- | --- |
-| **Notations Gaming** | Games, graphics and interactive worlds. |
-| **Notations Manufacturing** | Industrial design, materials and manufacturing systems. |
-| **Notations Laboratories** | Research, scientific computing, simulation and experimental validation. |
+| **Notations Gaming** | Games, graphics, world building, interactive environments and gameplay simulation. |
+| **Notations Manufacturing** | Design, machinery integration, process development, fabrication and production systems. |
+| **Notations Laboratories** | Research and experimental validation in scientific computing, measurement, physics and chemistry modelling, materials and simulation. |
 
-This repository contributes calibration and uncertainty propagation to **Notations Laboratories**, supporting measurement and instrumentation work across the divisions.
+**Repository role:** Calibration is a **Notations Laboratories** measurement instrument for declared affine corrections, applicability checks and first order joint uncertainty budgets. It supplies a bounded calibration step for the company's broader measurement and state estimation direction; physical use still requires application specific calibration evidence.
 
 ## Status and scope
 
