@@ -1,20 +1,12 @@
-# Notations Calibration
+# Calibration
 
-**Apply a supplied affine calibration while preserving raw measurements and propagating correlated uncertainty.**
-
-[Run](#run) · [Public API](#public-api) · [Scope](#status-and-scope) · [Research profile](#research-profile)
-
-## Notation Systems and this instrument
-
-**Notation Systems — Frontier Tooling and Instrumentation for Digital Futures.** This instrument provides declared calibration applicability and measurement-specific uncertainty propagation. [Notations Systems Terminal](https://github.com/giasonpooni/Notations-Systems-Terminal) coordinates supported operations; it does not replace the provider's mathematics, measurement semantics or evidence authority.
-
-The current repository is `Notations-Calibration-Runtime`. Existing `mcur` imports, operation IDs and historical pins remain unchanged. The firm's operational products and Cartesian Graphics' creative/IP programme have separate state and release responsibilities. [Organization profile](https://github.com/giasonpooni/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/PUBLIC_POSITIONING.md).
+**Apply declared measurement calibration and retain the full first-order uncertainty budget.**
 
 | NET micro-tool | Identity and scope |
 | --- | --- |
 | User-facing name | **Calibration** |
 | Proposed NET operation | `measure.calibrate` |
-| Implementation repository | `Notations-Calibration-Runtime` |
+| Implementation repository | `Metrological-Calibration-Uncertainty-Runtime` |
 | Existing provider and import | Metrological Calibration and Uncertainty Runtime / MCUR; `mcur` |
 | Existing operation | `mcur.affine-first-order.v1` |
 | Current boundary | Apply a declared affine calibration and propagate joint uncertainty; no calibration-fitting or certificate-issuing service |
@@ -28,12 +20,13 @@ NET owns session composition and dispatch; this provider owns calibration
 applicability and measurement-specific uncertainty propagation. **Sensor Adapter**
 retains the measurement-chain boundary and **Sensitivity** retains general
 Jacobian operations. Evidence, operation specifications, execution attempts and
-verification records remain distinct. Imports, operation IDs, contracts,
-historical pins and licence terms are unchanged.
+verification records remain distinct. Repository URLs, imports, operation IDs,
+contracts, historical pins and licence terms are unchanged.
 
-[Notations Systems Terminal (CIW)](https://github.com/giasonpooni/Notations-Systems-Terminal) · [Stack placement and ownership](docs/STACK.md) · [Diagram atlas](https://github.com/giasonpooni/Notations-Systems-Terminal/blob/main/docs/DIAGRAMS.md) · [License](LICENSE)
+[Notations Engineering Terminal (CIW)](https://github.com/atomtrapping/Notations-Systems-Terminal) · [Stack placement and ownership](docs/STACK.md) · [Diagram atlas](https://github.com/atomtrapping/Notations-Systems-Terminal/blob/main/docs/DIAGRAMS.md) · [License](LICENSE)
 
 MCUR is a bounded scientific instrument for applying a declared affine measurement calibration and propagating its joint uncertainty. It keeps the raw observation, indicated value, corrected value, calibration evidence references, applicability checks, and uncertainty budget distinct.
+
 
 ```mermaid
 flowchart TD
@@ -56,6 +49,20 @@ y=gx+b,\qquad J=[g,\;x,\;1],\qquad u_y^2=J\Sigma_{[x,g,b]}J^T.
 \]
 
 The complete ordered covariance includes correlation between the indication, gain, and offset. Calibration coefficient covariance is pinned in the profile and must equal the corresponding block in the supplied joint covariance.
+
+## Organization
+
+**Notation Systems Inc** is the parent organization: a scientific computing and systems engineering company developing computational instruments, software and interactive environments for understanding and building physical and virtual systems.
+
+The company's development direction connects measurement, state estimation and sensor fusion, scientific modelling, simulation and execution, from materials and machines to interactive worlds.
+
+| Division | Focus |
+| --- | --- |
+| **Notations Gaming** | Games, graphics, world building, interactive environments and gameplay simulation. |
+| **Notations Manufacturing** | Design, machinery integration, process development, fabrication and production systems. |
+| **Notations Laboratories** | Research and experimental validation in scientific computing, measurement, physics and chemistry modelling, materials and simulation. |
+
+**Repository role:** Calibration is a **Notations Laboratories** measurement instrument for declared affine corrections, applicability checks and first order joint uncertainty budgets. It supplies a bounded calibration step for the company's broader measurement and state estimation direction; physical use still requires application specific calibration evidence.
 
 ## Status and scope
 
@@ -115,9 +122,17 @@ The complete examples demonstrate concrete record construction. The optional `mc
 | Sensitivity / Jacobian Sensitivity Propagation Testbed (JSPT) | Generalized sensitivity and uncertainty propagation remain separate from this measurement-specific calibration operation. |
 | Geometric State Inference Engine (GSIE) | May consume the corrected measurement and candidate uncertainty through an explicit mapping. MCUR does not infer plant state or certify estimator adequacy. |
 | Estimator Bench / SET | Owns the existing exchange contract and external conformance validation. |
-| [Notations Systems Terminal (CIW)](https://github.com/giasonpooni/Notations-Systems-Terminal) / State Ledger (ESM) | Bind evidence, executions, results, verification, and admission under their own authority. This repository has no native CIW adapter and grants no admission or actuation authority. |
+| [Notations Engineering Terminal (CIW)](https://github.com/atomtrapping/Notations-Systems-Terminal) / State Ledger (ESM) | Bind evidence, executions, results, verification, and admission under their own authority. This repository has no native CIW adapter and grants no admission or actuation authority. |
 
 See [the contract](docs/CONTRACT.md), [numerical semantics](docs/NUMERICS.md), and [stack role](docs/STACK_ROLE.md).
+
+## License
+
+Mozilla Public License 2.0. See [LICENSE](LICENSE).
+
+## Instrument role
+
+The current repository is `Notations-Calibration-Runtime`. Existing `mcur` imports, operation IDs and historical pins remain unchanged. The firm's operational products and Notations Gaming's creative/IP programme have separate state and release responsibilities. [Current organization](#organization).
 
 ## Research profile
 
@@ -125,8 +140,4 @@ See [the contract](docs/CONTRACT.md), [numerical semantics](docs/NUMERICS.md), a
 
 Compare reference errors, cross-term effects, refusal behavior and replay under fixed assumptions; then test new compositions without treating shared correlations as independent. Record runtime and human effort separately from scientific accuracy. Broader categorical or measure-theoretic formulations are research goals, not established results of this implementation.
 
-[Shared research protocol](https://github.com/giasonpooni/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/RESEARCH_PROGRAMME.md). This documentation installs no telemetry collector, extra language backend or CUDA implementation and reports no new test run.
-
-## License
-
-Mozilla Public License 2.0. See [LICENSE](LICENSE). Existing attribution, numerical code, tests, dependencies and publication status are unchanged.
+[Historical research protocol](https://github.com/atomtrapping/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/RESEARCH_PROGRAMME.md). This documentation installs no telemetry collector, extra language backend or CUDA implementation and reports no new test run.
