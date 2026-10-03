@@ -23,7 +23,7 @@ Jacobian operations. Evidence, operation specifications, execution attempts and
 verification records remain distinct. Repository URLs, imports, operation IDs,
 contracts, historical pins and licence terms are unchanged.
 
-[Notations Engineering Terminal (CIW)](https://github.com/giasonpooni/Notations-Engineering-Terminal) · [Stack placement and ownership](docs/STACK.md) · [Diagram atlas](https://github.com/giasonpooni/Notations-Engineering-Terminal/blob/main/docs/DIAGRAMS.md) · [License](LICENSE)
+[Notations Engineering Terminal (CIW)](https://github.com/atomtrapping/Notations-Systems-Terminal) · [Stack placement and ownership](docs/STACK.md) · [Diagram atlas](https://github.com/atomtrapping/Notations-Systems-Terminal/blob/main/docs/DIAGRAMS.md) · [License](LICENSE)
 
 MCUR is a bounded scientific instrument for applying a declared affine measurement calibration and propagating its joint uncertainty. It keeps the raw observation, indicated value, corrected value, calibration evidence references, applicability checks, and uncertainty budget distinct.
 
@@ -122,7 +122,7 @@ The complete examples demonstrate concrete record construction. The optional `mc
 | Sensitivity / Jacobian Sensitivity Propagation Testbed (JSPT) | Generalized sensitivity and uncertainty propagation remain separate from this measurement-specific calibration operation. |
 | Geometric State Inference Engine (GSIE) | May consume the corrected measurement and candidate uncertainty through an explicit mapping. MCUR does not infer plant state or certify estimator adequacy. |
 | Estimator Bench / SET | Owns the existing exchange contract and external conformance validation. |
-| [Notations Engineering Terminal (CIW)](https://github.com/giasonpooni/Notations-Engineering-Terminal) / State Ledger (ESM) | Bind evidence, executions, results, verification, and admission under their own authority. This repository has no native CIW adapter and grants no admission or actuation authority. |
+| [Notations Engineering Terminal (CIW)](https://github.com/atomtrapping/Notations-Systems-Terminal) / State Ledger (ESM) | Bind evidence, executions, results, verification, and admission under their own authority. This repository has no native CIW adapter and grants no admission or actuation authority. |
 
 See [the contract](docs/CONTRACT.md), [numerical semantics](docs/NUMERICS.md), and [stack role](docs/STACK_ROLE.md).
 

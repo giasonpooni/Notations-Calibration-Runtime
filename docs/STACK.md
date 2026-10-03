@@ -1,5 +1,5 @@
 # Instrument foundations in the existing stack
-[System diagram atlas](https://github.com/giasonpooni/Computational-Instrumentation-Workbench/blob/main/docs/DIAGRAMS.md) gives the shared topology and authority boundaries. The local README, numerical contract, and operation contract explain this instrument's implemented mechanism; stack relationships do not imply a native execution adapter.
+[System diagram atlas](https://github.com/atomtrapping/Notations-Systems-Terminal/blob/main/docs/DIAGRAMS.md) gives the shared topology and authority boundaries. The local README, numerical contract, and operation contract explain this instrument's implemented mechanism; stack relationships do not imply a native execution adapter.
 
 
 These six standalone Python instruments extend Notation Systems' computational
@@ -10,27 +10,27 @@ native Computational Instrumentation Workbench execution adapter.
 
 | Instrument | Implemented numerical foundation | Relationship to existing components |
 | --- | --- | --- |
-| [Time Base Reconciliation Runtime](https://github.com/giasonpooni/Time-Base-Reconciliation-Runtime) | Supplied affine clock mapping and correlated first-order time uncertainty | Derives event-time coordinates while PPDA retains source timestamps; consumers must explicitly select the derived coordinate |
-| [Observability and Identifiability Testbed](https://github.com/giasonpooni/Observability-Identifiability-Testbed) | Finite-horizon linear observability and local sensitivity/Fisher diagnostics | Diagnoses declared GSIE models and supplied JSPT sensitivities; SET retains evaluation responsibility |
-| [Metrological Calibration and Uncertainty Runtime](https://github.com/giasonpooni/Metrological-Calibration-Uncertainty-Runtime) | Applicable affine calibration and full correlated first-order uncertainty | Complements RCI's measurement-chain boundary; does not replace its existing calibration operation or pins |
-| [System Identification and Dynamics Testbed](https://github.com/giasonpooni/System-Identification-Dynamics-Testbed) | Fully observed discrete linear least squares and one-step evaluation | Produces candidate dynamics; model selection and use by GSIE remain explicit caller decisions |
-| [Fault Detection and Isolation Runtime](https://github.com/giasonpooni/Fault-Detection-Isolation-Runtime) | Innovation NIS/whitening and deterministic CUSUM transitions | Interprets supplied residuals statistically; SET retains offline benchmarking; physical fault isolation is not implemented |
-| [Experiment Design and Sensor Placement Testbed](https://github.com/giasonpooni/Experiment-Design-Sensor-Placement-Testbed) | Finite candidate information ranking with D- and A-optimal criteria | Consumes declared sensitivities and noise models; outputs advisory rankings without commanding acquisition |
+| [Time Base Reconciliation Runtime](https://github.com/atomtrapping/Notations-ClockSync) | Supplied affine clock mapping and correlated first-order time uncertainty | Derives event-time coordinates while PPDA retains source timestamps; consumers must explicitly select the derived coordinate |
+| [Observability and Identifiability Testbed](https://github.com/atomtrapping/Notations-Observability-Testbed) | Finite-horizon linear observability and local sensitivity/Fisher diagnostics | Diagnoses declared GSIE models and supplied JSPT sensitivities; SET retains evaluation responsibility |
+| [Metrological Calibration and Uncertainty Runtime](https://github.com/atomtrapping/Notations-Calibration-Runtime) | Applicable affine calibration and full correlated first-order uncertainty | Complements RCI's measurement-chain boundary; does not replace its existing calibration operation or pins |
+| [System Identification and Dynamics Testbed](https://github.com/atomtrapping/Notations-Linear-Dynamics-Testbed) | Fully observed discrete linear least squares and one-step evaluation | Produces candidate dynamics; model selection and use by GSIE remain explicit caller decisions |
+| [Fault Detection and Isolation Runtime](https://github.com/atomtrapping/Notations-FaultSense-RunTime) | Innovation NIS/whitening and deterministic CUSUM transitions | Interprets supplied residuals statistically; SET retains offline benchmarking; physical fault isolation is not implemented |
+| [Experiment Design and Sensor Placement Testbed](https://github.com/atomtrapping/Notations-SensorDesign-RunTime) | Finite candidate information ranking with D- and A-optimal criteria | Consumes declared sensitivities and noise models; outputs advisory rankings without commanding acquisition |
 
 ## Preserved ownership
 
 | Existing component | Retained authority |
 | --- | --- |
-| [PPDA](https://github.com/giasonpooni/Provenance-Preserving-Data-Acquisition) | Source bytes, extraction lineage, observation identity and missingness |
-| [STFE](https://github.com/giasonpooni/Streaming-Telemetry-Feature-Extraction) | Signal conditioning, windows, spectral/temporal features and quality |
-| [GTE](https://github.com/giasonpooni/Geometric-Telemetry-Engine) | Declared geometry and coordinate operations |
-| [GSIE](https://github.com/giasonpooni/Geometric-State-Inference-Engine) | State estimation and model-conditional covariance |
-| [JSPT](https://github.com/giasonpooni/Jacobian-Sensitivity-Propagation-Testbed) | General sensitivity and covariance transport |
-| [CBSR](https://github.com/giasonpooni/Constraint-Based-State-Reconciliation) | Declared constraint reconciliation |
-| [SET](https://github.com/giasonpooni/State-Estimation-Evaluation-Testbed) | Existing exchange validation and estimator evaluation boundary |
-| [CIW](https://github.com/giasonpooni/Computational-Instrumentation-Workbench) | Source-pinned operation binding, sessions, inspection and replay |
-| [SCR](https://github.com/giasonpooni/Scientific-Computation-Runtime) | Declared execution and separate verification records |
-| [ESM](https://github.com/giasonpooni/Evidence-and-State-Management) | Evidence admission, state transitions, history and release |
+| [PPDA](https://github.com/atomtrapping/Notations-Data-Intake) | Source bytes, extraction lineage, observation identity and missingness |
+| [STFE](https://github.com/atomtrapping/Notations-Signal-Processing-RunTime) | Signal conditioning, windows, spectral/temporal features and quality |
+| [GTE](https://github.com/atomtrapping/Notations-Telemetry-Engine) | Declared geometry and coordinate operations |
+| [GSIE](https://github.com/atomtrapping/Notations-State-Inference-Engine) | State estimation and model-conditional covariance |
+| [JSPT](https://github.com/atomtrapping/Notations-Sensitivity-Testbed) | General sensitivity and covariance transport |
+| [CBSR](https://github.com/atomtrapping/Notations-State-Recompiler) | Declared constraint reconciliation |
+| [SET](https://github.com/atomtrapping/Notations-Estimator-Bench) | Existing exchange validation and estimator evaluation boundary |
+| [CIW](https://github.com/atomtrapping/Notations-Systems-Terminal) | Source-pinned operation binding, sessions, inspection and replay |
+| [SCR](https://github.com/atomtrapping/Notations-Compute-Runtime) | Declared execution and separate verification records |
+| [ESM](https://github.com/atomtrapping/Notations-State-Ledger) | Evidence admission, state transitions, history and release |
 
 The new packages neither import private operating state nor create a canonical
 write path. Numerical validation stays local to each bounded method. No seventh
