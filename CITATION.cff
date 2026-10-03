@@ -5,7 +5,7 @@ type: software
 version: 0.1.0
 authors:
   - name: "Giason Pooni"
-repository-code: "https://github.com/giasonpooni/Notations-Calibration-Runtime"
+repository-code: "https://github.com/atomtrapping/Notations-Calibration-Runtime"
 license: MPL-2.0
 abstract: "A bounded affine measurement-calibration instrument with explicit applicability and correlated first-order uncertainty propagation."
 keywords:
