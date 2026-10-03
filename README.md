@@ -50,6 +50,18 @@ y=gx+b,\qquad J=[g,\;x,\;1],\qquad u_y^2=J\Sigma_{[x,g,b]}J^T.
 
 The complete ordered covariance includes correlation between the indication, gain, and offset. Calibration coefficient covariance is pinned in the profile and must equal the corresponding block in the supplied joint covariance.
 
+## Organization
+
+**Notation Systems Inc** is the parent organization.
+
+| Division | Focus |
+| --- | --- |
+| **Notations Gaming** | Games, graphics and interactive worlds. |
+| **Notations Manufacturing** | Industrial design, materials and manufacturing systems. |
+| **Notations Laboratories** | Research, scientific computing, simulation and experimental validation. |
+
+This repository contributes calibration and uncertainty propagation to **Notations Laboratories**, supporting measurement and instrumentation work across the divisions.
+
 ## Status and scope
 
 This repository contains an executable Python foundation, synthetic replay, analytical and adversarial tests, and optional export into the existing State Estimation Evaluation Testbed (SET) result contract. It does not contain a physical sensor integration, calibration fitting service, calibration certificate issuer, or operational admission controller.
