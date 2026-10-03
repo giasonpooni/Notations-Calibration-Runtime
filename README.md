@@ -2,14 +2,6 @@
 
 **Apply declared measurement calibration and retain the full first-order uncertainty budget.**
 
-## Notation Systems and this instrument
-
-**Notation Systems develops evidence-backed industrial intelligence and computational instrumentation, connecting expert knowledge and observations to bounded, inspectable work.** Its domains remain **PAYLOAD** (physical operations, facilities, materials and logistics, including Caravan), **LANDSHARK** (land/site and spatial constraints), and **TRADEWIND** (contracts, prices and exposure). PayloadOS/ESM govern industrial evidence/state; Dossier Services packages scoped service outputs.
-
-This instrument owns **declared calibration applicability and measurement-specific uncertainty propagation**, not sensor acquisition, certificate issuance or evidence admission. [Notations Systems Terminal (NET)](https://github.com/giasonpooni/Notations-Systems-Terminal) coordinates typed work without absorbing this provider's mathematics. NET / `net` / `ciw` and `mcur` identities remain intact. The current repository is `Metrological-Calibration-Runtime`; older names and pins below remain compatibility context.
-
-The intended expertise-amplification path is **expert input → reviewed specification → bounded execution → observations and checks → authorized integration/release**. Manufacturing, robotics, materials, GIS/remote sensing, DSP and analytics are workload families, not completed integrations. Cartesian Graphics is the firm's games/graphics/physics/simulation label; 1792 is a reference workload, not metrological traceability. Keep evidence, operation, execution, result and verification distinct. General capture and dependency-aware rebuilding remain targets; logical containers are not OS security sandboxes. Existing APIs, first-order assumptions and licences are unchanged. Evaluate useful accepted work alongside human effort, cost, rework and appropriate physical validation.
-
 | NET micro-tool | Identity and scope |
 | --- | --- |
 | User-facing name | **Calibration** |
@@ -31,7 +23,7 @@ Jacobian operations. Evidence, operation specifications, execution attempts and
 verification records remain distinct. Repository URLs, imports, operation IDs,
 contracts, historical pins and licence terms are unchanged.
 
-[Notations Engineering Terminal (CIW)](https://github.com/giasonpooni/Notations-Engineering-Terminal) · [Stack placement and ownership](docs/STACK.md) · [Diagram atlas](https://github.com/giasonpooni/Notations-Engineering-Terminal/blob/main/docs/DIAGRAMS.md) · [License](LICENSE)
+[Notations Engineering Terminal (CIW)](https://github.com/atomtrapping/Notations-Systems-Terminal) · [Stack placement and ownership](docs/STACK.md) · [Diagram atlas](https://github.com/atomtrapping/Notations-Systems-Terminal/blob/main/docs/DIAGRAMS.md) · [License](LICENSE)
 
 MCUR is a bounded scientific instrument for applying a declared affine measurement calibration and propagating its joint uncertainty. It keeps the raw observation, indicated value, corrected value, calibration evidence references, applicability checks, and uncertainty budget distinct.
 
@@ -57,6 +49,20 @@ y=gx+b,\qquad J=[g,\;x,\;1],\qquad u_y^2=J\Sigma_{[x,g,b]}J^T.
 \]
 
 The complete ordered covariance includes correlation between the indication, gain, and offset. Calibration coefficient covariance is pinned in the profile and must equal the corresponding block in the supplied joint covariance.
+
+## Organization
+
+**Notation Systems Inc** is the parent organization: a scientific computing and systems engineering company developing computational instruments, software and interactive environments for understanding and building physical and virtual systems.
+
+The company's development direction connects measurement, state estimation and sensor fusion, scientific modelling, simulation and execution, from materials and machines to interactive worlds.
+
+| Division | Focus |
+| --- | --- |
+| **Notations Gaming** | Games, graphics, world building, interactive environments and gameplay simulation. |
+| **Notations Manufacturing** | Design, machinery integration, process development, fabrication and production systems. |
+| **Notations Laboratories** | Research and experimental validation in scientific computing, measurement, physics and chemistry modelling, materials and simulation. |
+
+**Repository role:** Calibration is a **Notations Laboratories** measurement instrument for declared affine corrections, applicability checks and first order joint uncertainty budgets. It supplies a bounded calibration step for the company's broader measurement and state estimation direction; physical use still requires application specific calibration evidence.
 
 ## Status and scope
 
@@ -116,10 +122,16 @@ The complete examples demonstrate concrete record construction. The optional `mc
 | Sensitivity / Jacobian Sensitivity Propagation Testbed (JSPT) | Generalized sensitivity and uncertainty propagation remain separate from this measurement-specific calibration operation. |
 | Geometric State Inference Engine (GSIE) | May consume the corrected measurement and candidate uncertainty through an explicit mapping. MCUR does not infer plant state or certify estimator adequacy. |
 | Estimator Bench / SET | Owns the existing exchange contract and external conformance validation. |
-| [Notations Engineering Terminal (CIW)](https://github.com/giasonpooni/Notations-Engineering-Terminal) / State Ledger (ESM) | Bind evidence, executions, results, verification, and admission under their own authority. This repository has no native CIW adapter and grants no admission or actuation authority. |
+| [Notations Engineering Terminal (CIW)](https://github.com/atomtrapping/Notations-Systems-Terminal) / State Ledger (ESM) | Bind evidence, executions, results, verification, and admission under their own authority. This repository has no native CIW adapter and grants no admission or actuation authority. |
 
 See [the contract](docs/CONTRACT.md), [numerical semantics](docs/NUMERICS.md), and [stack role](docs/STACK_ROLE.md).
 
 ## License
 
 Mozilla Public License 2.0. See [LICENSE](LICENSE).
+
+## Portable instrument contract
+
+The additive [portable instrument surface](docs/INSTRUMENT_SURFACE.md) emits the
+installed adapter manifest with source, capability and artifact identities. It
+does not grant execution or evidence-admission authority.
