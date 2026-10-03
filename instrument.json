@@ -1,0 +1,90 @@
+{
+  "schema": "notations.instrument.v1",
+  "identity": {
+    "name": "Calibration",
+    "slug": "calibration",
+    "version": "0.1.0",
+    "maturity": "INSTRUMENT",
+    "brand": "Notation Systems",
+    "positioning": "Frontier Tooling and Instrumentation for Digital Futures"
+  },
+  "operation": {
+    "id": "mcur.affine-first-order.v1",
+    "semantic_capability": "measure.calibrate.v1",
+    "purpose": "Apply a declared affine measurement calibration and propagate the full declared joint first-order uncertainty.",
+    "deterministic_given_inputs": true,
+    "kind": "compute",
+    "effects": [
+      "read:measurement-observation",
+      "read:calibration-profile",
+      "write:calibrated-measurement"
+    ]
+  },
+  "provider": {
+    "id": "org.notationsystems.calibration",
+    "runtime_family": "python",
+    "execution_profile": "scientific",
+    "execution_mode": "headless",
+    "resources": ["cpu"],
+    "priority": 100,
+    "ports": {
+      "inputs": {
+        "request": {
+          "schema": "notations.calibration.request.v1",
+          "unit": null,
+          "frame": null
+        }
+      },
+      "outputs": {
+        "result": {
+          "schema": "notations.calibration.result.v1",
+          "unit": null,
+          "frame": null
+        }
+      }
+    }
+  },
+  "implementation": {
+    "language": "Python",
+    "runtime": "CPython 3.11+",
+    "distribution": "metrological-calibration-and-uncertainty-runtime",
+    "module": "mcur",
+    "network_required": false,
+    "hardware_required": false
+  },
+  "model": {
+    "family": "affine-calibration-first-order",
+    "equation": "y = g*x + b",
+    "jacobian": "[g, x, 1]",
+    "joint_covariance_order": ["x", "g", "b"],
+    "uncertainty": "J * Sigma[x,g,b] * J^T",
+    "cross_covariance_required": true
+  },
+  "inputs": {
+    "observation": "typed indicated/raw measurement with acquisition time and applicability context",
+    "profile": "declared affine calibration profile with coefficient covariance and validity domain",
+    "joint_covariance": "full PSD covariance over [x,g,b]"
+  },
+  "outputs": {
+    "corrected_value": "calibrated value in declared output unit",
+    "uncertainty_budget": "first-order variance contributions including cross terms",
+    "retained_source": true
+  },
+  "verification": {
+    "builder": "scripts/build_instrument_surface.py",
+    "report_schema": "notations.verification.v1",
+    "canonical_specimen": "synthetic-pressure-affine"
+  },
+  "representations": {
+    "readme": "README.md",
+    "contract": "docs/CONTRACT.md",
+    "numerics": "docs/NUMERICS.md",
+    "verification": "docs/INSTRUMENT_SURFACE.md"
+  },
+  "limits": [
+    "Does not fit calibration coefficients.",
+    "Does not issue calibration certificates or establish traceability.",
+    "Does not acquire sensors, convert units implicitly, or admit state.",
+    "Reported uncertainty is first-order for the declared joint input covariance."
+  ]
+}
