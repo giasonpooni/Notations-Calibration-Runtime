@@ -130,6 +130,18 @@ See [the contract](docs/CONTRACT.md), [numerical semantics](docs/NUMERICS.md), a
 
 Mozilla Public License 2.0. See [LICENSE](LICENSE).
 
+## Instrument role
+
+The current repository is `Notations-Calibration-Runtime`. Existing `mcur` imports, operation IDs and historical pins remain unchanged. The firm's operational products and Notations Gaming's creative/IP programme have separate state and release responsibilities. [Current organization](#organization).
+
+## Research profile
+
+**Question:** when do declared calibration chains preserve their measurement meaning and uncertainty? The affine specimen supplies a bounded test case for joint covariance, applicability at acquisition time and the separation of raw, indicated and corrected values.
+
+Compare reference errors, cross-term effects, refusal behavior and replay under fixed assumptions; then test new compositions without treating shared correlations as independent. Record runtime and human effort separately from scientific accuracy. Broader categorical or measure-theoretic formulations are research goals, not established results of this implementation.
+
+[Historical research protocol](https://github.com/atomtrapping/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/RESEARCH_PROGRAMME.md). This documentation installs no telemetry collector, extra language backend or CUDA implementation and reports no new test run.
+
 ## Portable instrument contract
 
 The additive [portable instrument surface](docs/INSTRUMENT_SURFACE.md) emits the
